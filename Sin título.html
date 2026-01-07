@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="es"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Boda Stephania &amp; Francisco&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Tailwind CSS para Estilos --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- React y Babel para que el código funcione en el navegador --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/react@18/umd/react.production.min.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/@babel/standalone/babel.min.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Lucide Icons --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/lucide@latest"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Montserrat:wght@200;300;400&amp;display=swap');</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: 'Cormorant Garamond', serif; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.font-sans-custom { font-family: 'Montserrat', sans-serif; }</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes fade-in {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>from { opacity: 0; transform: translateY(30px); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>to { opacity: 1; transform: translateY(0); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.animate-fade-in { animation: fade-in 2.5s ease-out forwards; }</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.bg-crema { background-color: #FAF7F2; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.text-olivo { color: #5D6D31; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.text-terracota { color: #8C4B3E; }</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>select {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='1' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-repeat: no-repeat;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-position: right 1rem center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="root"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script type="text/babel"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const { useState, useEffect } = React;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const App = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const [timeLeft, setTimeLeft] = useState({ d: 0, h: 0, m: 0, s: 0 });</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>useEffect(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const weddingDate = new Date('July 7, 2026 17:00:00').getTime();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const timer = setInterval(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const now = new Date().getTime();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const distance = weddingDate - now;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>setTimeLeft({</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>d: Math.floor(distance / (1000 * 60 * 60 * 24)),</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>h: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>m: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>s: Math.floor((distance % (1000 * 60)) / 1000)</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}, 1000);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return () =&gt; clearInterval(timer);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}, []);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const sendWhatsApp = (e) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const nombre = e.target.nombre.value;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const personas = e.target.personas.value;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const mensaje = `¡Hola Stephania y Francisco! Soy ${nombre}, confirmo mi asistencia (${personas}) para su boda el 07-07-2026.`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Reemplaza el número de abajo con el tuyo (52 + número a 10 dígitos)</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const tel = "526641234567";<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>window.open(`https://wa.me/${tel}?text=${encodeURIComponent(mensaje)}`, '_blank');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div className="min-h-screen bg-crema text-stone-800 selection:bg-stone-200"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{/* Hero */}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;header className="h-screen flex flex-col items-center justify-center text-center px-4 relative overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div className="absolute inset-0 opacity-5 pointer-events-none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;svg width="100%" height="100%"&gt;&lt;pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"&gt;&lt;path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="0.5"/&gt;&lt;/pattern&gt;&lt;rect width="100%" height="100%" fill="url(#grid)" /&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div className="animate-fade-in z-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p className="font-sans-custom uppercase tracking-[0.4em] text-[10px] mb-8 text-terracota"&gt;Nuestra Boda en el Valle&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h1 className="text-6xl md:text-9xl font-thin italic mb-8 leading-tight"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>Stephania &lt;span className="block text-4xl md:text-6xl not-italic font-light my-2"&gt;&amp;&lt;/span&gt; Francisco</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div className="w-24 h-px bg-stone-300 mx-auto mb-8"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p className="text-xl md:text-3xl font-light tracking-[0.2em] font-sans-custom"&gt;07 · 07 · 2026&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p className="mt-4 italic opacity-50 text-lg"&gt;Valle de Guadalupe, México&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div className="absolute bottom-10 animate-bounce opacity-20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i data-lucide="chevron-down" size="32"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{/* Contador */}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;section className="py-16 bg-white border-y border-stone-100 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div className="flex justify-center gap-6 md:gap-16"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>{[</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>{ l: 'DÍAS', v: timeLeft.d },</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>{ l: 'HRS', v: timeLeft.h },</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>{ l: 'MIN', v: timeLeft.m },</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>{ l: 'SEG', v: timeLeft.s }</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>].map((t, i) =&gt; (</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div key={i} className="flex flex-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span className="text-4xl md:text-6xl font-thin text-olivo"&gt;{t.v}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span className="font-sans-custom text-[9px] tracking-widest opacity-50 mt-2"&gt;{t.l}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>))}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{/* Invitación */}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;section className="py-32 px-6 text-center max-w-2xl mx-auto space-y-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i data-lucide="heart" className="mx-auto text-terracota opacity-30" size="32"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p className="text-2xl md:text-3xl italic font-light leading-relaxed text-stone-700"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"Dos almas, un camino y un destino que celebrar entre vides y amaneceres."</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p className="text-lg font-light opacity-80 leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Con mucha ilusión, les invitamos a compartir con nosotros el día más importante de nuestras vidas.</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{/* Detalles */}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;section className="py-24 px-6 bg-stone-50"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div className="bg-white p-14 rounded-[3rem] shadow-sm border border-stone-100 text-center space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;i data-lucide="map-pin" className="mx-auto text-olivo opacity-40" size="32"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h3 className="text-3xl font-light italic"&gt;El Lugar&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p className="text-xl mb-1"&gt;Viñedo Corazón del Valle&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p className="text-sm opacity-60 font-sans-custom"&gt;Ensenada, Baja California&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p className="text-sm font-sans-custom opacity-50 italic"&gt;Ceremonia: 5:00 PM&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;a href="https://maps.google.com" target="_blank" className="inline-block mt-4 px-8 py-3 border border-stone-200 rounded-full text-[10px] tracking-widest uppercase hover:bg-stone-50 transition-all font-sans-custom"&gt;Abrir Mapa&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div className="bg-white p-14 rounded-[3rem] shadow-sm border border-stone-100 text-center space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;i data-lucide="glass-water" className="mx-auto text-terracota opacity-40" size="32"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h3 className="text-3xl font-light italic"&gt;Vestimenta&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p className="text-xl mb-1"&gt;Formal Guayabera&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p className="text-sm opacity-60 font-sans-custom"&gt;Damas: Vestido de fiesta&lt;br/&gt;Caballeros: Guayabera formal&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div className="flex justify-center gap-3 mt-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div className="w-4 h-4 rounded-full bg-[#5D6D31]"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div className="w-4 h-4 rounded-full bg-[#8C4B3E]"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div className="w-4 h-4 rounded-full bg-[#D4A373]"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{/* RSVP */}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;section className="py-32 px-6 bg-stone-900 text-white text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div className="max-w-md mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h2 className="text-4xl font-thin italic mb-4"&gt;Confirmar Asistencia&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p className="font-sans-custom text-[10px] tracking-[0.3em] uppercase opacity-40 mb-12"&gt;Favor de confirmar antes del 07.06.26&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                            </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;form onSubmit={sendWhatsApp} className="space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;input name="nombre" type="text" placeholder="Nombre completo" required className="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-2xl focus:outline-none focus:border-white/40 transition-all font-light" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;select name="personas" className="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-2xl focus:outline-none focus:border-white/40 transition-all font-light appearance-none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;option className="text-black"&gt;1 Persona&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;option className="text-black"&gt;2 Personas&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;option className="text-black"&gt;Familia&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;button type="submit" className="w-full py-5 rounded-2xl font-sans-custom text-[11px] tracking-[0.4em] uppercase transition-all bg-[#5D6D31] hover:brightness-110 flex items-center justify-center gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>Confirmar vía WhatsApp</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;footer className="py-20 text-center opacity-30 text-[9px] tracking-[0.5em] uppercase font-sans-custom"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;S &amp; F · 2026&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const root = ReactDOM.createRoot(document.getElementById('root'));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>root.render(&lt;App /&gt;);</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Inicializar iconos</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setTimeout(() =&gt; lucide.createIcons(), 100);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
